@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  requested_datetime: 2025-01-25 11:57:48
+  created_by_user: one
+  notes: MyText
+
+two:
+  requested_datetime: 2025-01-25 11:57:48
+  created_by_user: two
+  notes: MyText
