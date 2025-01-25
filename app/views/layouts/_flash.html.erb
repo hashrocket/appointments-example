@@ -1,0 +1,21 @@
+<% flash.each do |type, msg| %>
+  <% if type.to_s == "notice" %>
+    <div class="flex justify-between rounded-md bg-green-50 p-4 text-sm text-green-700 mb-8">
+      <%= msg %>
+      <button class="text-gray-500" onclick="removeFlash(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  <% else %>
+    <div class="flex justify-between rounded-md bg-red-50 p-4 text-sm text-red-700 mb-8">
+      <%= msg %>
+      <button class="text-gray-500" onclick="removeFlash(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  <% end %>
+<% end %>
