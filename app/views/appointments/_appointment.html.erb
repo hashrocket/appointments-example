@@ -19,7 +19,9 @@
     <dl class="flex w-full flex-none justify-between gap-x-8 sm:w-auto">
       <div class="flex w-16 gap-x-2.5">
         <span class="sr-only">Actions</span>
-        <%= link_to "Edit", edit_appointment_path(appointment), class: "text-xs text-indigo-500 hover:text-indigo-400", data: { turbo: false } %>
+        <% if appointment.created_by?(Current.user) %>
+          <%= link_to "Edit", edit_appointment_path(appointment), class: "text-xs text-indigo-500 hover:text-indigo-400", data: { turbo: false } %>
+        <% end %>
       </div>
     </dl>
   </div>
