@@ -4,11 +4,7 @@ class Appointment < ApplicationRecord
   validates :requested_datetime, presence: true
 
   after_save_commit -> {
-    broadcast_replace_to(
-      "appointments_list",
-      partial: "appointments/appointment",
-      locals: { appointment: self }
-    )
+    broadcast_refresh_to("appointments_list")
   }
 
   def created_by?(user)
