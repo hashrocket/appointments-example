@@ -1,24 +1,10 @@
-# README
+# Appointments Example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app demonstrates some ways to deal with user specific content that appears within global pages in a Rails application. Real time content updates are handled by turbo-rails.
 
-Things you may want to cover:
+* The `main` branch uses `broadcast_replace_to` with lazy loaded turbo frames
+* The `turbo-morph` branch uses `broadcast_refresh_to` with `morph`
 
-* Ruby version
+## About
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![Hashrocket logo](https://hashrocket.com/hashrocket_logo.svg)](https://hashrocket.com)
