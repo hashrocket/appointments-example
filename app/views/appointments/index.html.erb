@@ -1,3 +1,9 @@
+<%= content_for :head do %>
+  <nav class="flex justify-end p-4">
+    <span><%= Current.user.email_address %></span>
+  </nav>
+<% end %>
+
 <%= turbo_stream_from "appointments_list" %>
 
 <div class="flex flex-col mx-auto">
