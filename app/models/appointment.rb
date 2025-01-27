@@ -6,7 +6,7 @@ class Appointment < ApplicationRecord
   after_save_commit -> {
     broadcast_replace_to(
       "appointments_list",
-      partial: "appointments/appointment",
+      partial: "appointments/load_row",
       locals: { appointment: self }
     )
   }
